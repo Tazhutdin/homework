@@ -2,6 +2,7 @@
 #include <locale>
 #include <windows.h>
 #include "Book.h"
+#include "User.h"
 
 void setRussianLocale() {
     SetConsoleCP(1251);
@@ -13,27 +14,27 @@ int main() {
     setRussianLocale();
 
     try {
-        // Создаем книгу
-        Book book("Война и мир", "Лев Толстой", 1869, "978-5-17-70490-8");
+        // Создаем пользователя
+        User user("Иванов", "USR_001");
+        user.displayProfile();
 
-        // Тестируем методы
-        book.displayInfo();
+        // Добавляем книги
+        user.addBook("978-5-17-70490-8");
+        user.addBook("978-5-17-77192-5");
+        user.displayProfile();
 
-        // Пробуем выдать книгу
-        book.borrowBook("Иванов");
-        book.displayInfo();
+        // Пробуем добавить третью книгу
+        user.addBook("978-0-13-110388-8");
+        user.displayProfile();
 
-        // Пробуем вернуть книгу
-        book.returnBook();
-        book.displayInfo();
-
-        // Пробуем ошибочный год
-        Book badBook("Тест", "Автор", 1000, "123");
+        // Пробуем добавить четвертую (должна быть ошибка)
+        user.addBook("123");
 
     }
     catch (const std::exception& e) {
         std::cout << "Ошибка: " << e.what() << std::endl;
     }
+
 
     return 0;
 }
