@@ -1,0 +1,12 @@
+CMakeCache.txt
+CMakeFiles/
+*.sln
+*.vcxproj
+*.vcxproj.user
+.vs/
+*.exe
+*.o
+*.obj
+*.pdb
+.DS_Store
+Thumbs.db

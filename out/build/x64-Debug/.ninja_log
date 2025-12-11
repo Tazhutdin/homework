@@ -1,0 +1,7 @@
+# ninja log v6
+7	838	7871755614634887	CMakeFiles/library.dir/src/main.cpp.obj	6b42d0e864fc55f7
+25	841	7871755614809554	CMakeFiles/library.dir/src/Library.cpp.obj	67a0723015846205
+31	845	7871755614883661	CMakeFiles/library.dir/src/User.cpp.obj	2d67a500464c306d
+17	864	7871755614753944	CMakeFiles/library.dir/src/Book.cpp.obj	82926e5ad21a2a9
+6	1082	7871788256559302	CMakeFiles/library.dir/src/main.cpp.obj	6b42d0e864fc55f7
+1083	1615	7871788267298530	library.exe	c1266c30e527a5c1
